@@ -364,7 +364,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('Check Your PM 📥, \nI Have Sent Files For You 😻', show_alert=True)
+                await query.answer('Check Your PM 📥👀 \nI'll Send That Files For You 😻🤍', show_alert=True)
         except UserIsBlocked:
             await query.answer('Unblock the bot First 😤  \nThen Try Again ♻️!', show_alert=True)
         except PeerIdInvalid:
@@ -438,7 +438,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('UPDATES 🔔', url='https://t.me/thefilmyspotup'),
+            InlineKeyboardButton('UPDATES 🔔', url='https://t.me/thefilmyspotin'),
             InlineKeyboardButton('SUPPORT 🚨', url='https://t.me/thefilmyspothelp')
         ], [
             InlineKeyboardButton('Status 🚀', callback_data='stats')
@@ -643,7 +643,7 @@ async def auto_filter(client, msg, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)} ✧ {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"{get_size(file.file_size)}🔹{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
             ]
             for file in files
