@@ -64,7 +64,7 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)} ✧ {file.file_name}", callback_data=f'files#{file.file_id}'
+                    text=f"{get_size(file.file_size)}  ✿{file.file_name}", callback_data=f'files#{file.file_id}'
                 ),
             ]
             for file in files
@@ -364,7 +364,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('Check Your PM 📥👀 \n@Rubymathewsbot  Send That Files For You 😻🤍', show_alert=True)
+                await query.answer('Check Your PM 📥👀 \nI'll Send That Files For You 😻🤍', show_alert=True)
         except UserIsBlocked:
             await query.answer('Unblock the bot First 😤  \nThen Try Again ♻️!', show_alert=True)
         except PeerIdInvalid:
